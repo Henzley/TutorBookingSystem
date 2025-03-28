@@ -5,6 +5,7 @@ package za.ac.cput.Repository;
  * Author: [Cameron Savage] ([230582567])
  * Date: [27/03/2025]
  */
+//CRUD
 public interface IRepository<T, ID> {
     T create(T t);
     T read(ID id);

@@ -16,12 +16,13 @@ import static org.junit.jupiter.api.Assertions.*;
  * Author: [Cameron Savage] ([230582567])
  * Date: [27/03/25]
  */
+//TestMethodOrder used to ensure CRUD test follows the proper sequence
 @TestMethodOrder(MethodOrderer.MethodName.class)
 class StudentRepositoryTest {
     private static StudentRepository repository = StudentRepository.getRepository();
     private static Student student = StudentFactory.createStudent(
-            "John", "Doe", "john@cput.ac.za",
-            "0831234567", "219123456", "ADP"
+            "Jonas", "Doysus", "jonkles12@cput.ac.za",
+            "0831234567", "230582566", "ADP"
     );
 
     @Test
