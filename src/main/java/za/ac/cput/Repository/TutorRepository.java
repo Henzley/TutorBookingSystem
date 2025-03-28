@@ -1,6 +1,6 @@
 package za.ac.cput.Repository;
 
-/*  Tutor.java
+/*  TutorRepository.java
     Tutor repository class
     Author: Angelo Kane Smidt (230688020)
     Date: 28 March 2025
