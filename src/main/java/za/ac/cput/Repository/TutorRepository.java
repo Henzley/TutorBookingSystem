@@ -1,7 +1,7 @@
 package za.ac.cput.Repository;
 
 /*  Tutor.java
-    Tutor domain class
+    Tutor repository class
     Author: Angelo Kane Smidt (230688020)
     Date: 28 March 2025
  */
