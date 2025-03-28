@@ -45,7 +45,7 @@ public class Booking {
         return studentNumber;
     }
 
-    public String getBookingPayment() {
+    public String getBookingPrice() {
         return bookingPrice;
     }
 
