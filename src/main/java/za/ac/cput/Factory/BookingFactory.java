@@ -6,7 +6,7 @@ import za.ac.cput.util.Helper;
 /*
  * BookingFactory.java
  * Factory class for Booking domain
- * Author: Henzley Spogter
+ * Author: Henzley Spogter [230013309]
  * Date: 28 March 2025
  */
 public class BookingFactory {
@@ -16,7 +16,7 @@ public class BookingFactory {
                                         String bookingDate,
                                         String bookingTime,
                                         String studentNumber,
-                                        String bookingPayment,
+                                        String bookingPrice,
                                         String bookingStatus) {
         // Validate booking ID
         if (!Helper.isValidBookingId(bookingId)) {
@@ -54,7 +54,7 @@ public class BookingFactory {
                 .setBookingDate(bookingDate)
                 .setBookingTime(bookingTime)
                 .setStudentNumber(studentNumber)
-                .setBookingPayment(bookingPayment)
+                .setBookingPrice(bookingPrice)
                 .setBookingStatus(bookingStatus)
                 .build();
     }
