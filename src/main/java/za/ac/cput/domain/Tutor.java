@@ -12,7 +12,7 @@ public class Tutor {
     private String tutorSurname;
     private String tutorEmail;
     private long tutorPhoneNumber;
-   // tutorSubject: List <Subject>
+    // tutorSubject: List <Subject>
     private String qualifications;
 
     public Tutor(TutorBuilder tutorBuilder) {
@@ -31,8 +31,8 @@ public class Tutor {
         return tutorID;
     }
 
-   // public void setTutorID(String tutorID) {
-     //   this.tutorID = tutorID;
+    // public void setTutorID(String tutorID) {
+    //   this.tutorID = tutorID;
     //}
 
     public String getTutorName() {
@@ -85,5 +85,24 @@ public class Tutor {
                 ", Phone Number:" + tutorPhoneNumber +
                 ", Qualifications:'" + qualifications + '\'' +
                 '}';
+    }
+
+    public static class TutorBuilder {
+        private String tutorID;
+        private String tutorName;
+        private String tutorSurname;
+        private String tutorEmail;
+        private long tutorPhoneNumber;
+        // tutorSubject: List <Subject>
+        private String qualifications = "None";
+
+        public TutorBuilder setQualifications(String qualifications) {
+            this.qualifications = qualifications;
+            return this;
+        }
+
+        public Tutor build() {
+            return new Tutor(this);
+        }
     }
 }
