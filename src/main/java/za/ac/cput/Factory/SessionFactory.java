@@ -11,7 +11,7 @@ import za.ac.cput.util.Helper;
 
 public class SessionFactory {
 
-    public static Session createSession(String sessionID, String bookingID, String tutorID,
+    public static Session createSession  (String sessionID, String bookingID, String tutorID,
                                         Student student, String sessionStart, String sessionEnd,
                                         String sessionStatus, String location, Subject sessionSubject) {
 
@@ -19,7 +19,7 @@ public class SessionFactory {
             throw new IllegalArgumentException("Invalid session data");
         }
 
-        return new Session.Builder()
+        return new  Session.Builder()
                 .sessionID(sessionID)
                 .bookingID(bookingID)
                 .tutorID(tutorID)
