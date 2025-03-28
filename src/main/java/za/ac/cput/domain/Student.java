@@ -47,6 +47,18 @@ public class Student {
         private String studentNumber;
         private String course;
 
+
+        public Builder copy(Student student) {
+            this.studentId = student.studentId;
+            this.name = student.name;
+            this.surname = student.surname;
+            this.email = student.email;
+            this.phone = student.phone;
+            this.studentNumber = student.studentNumber;
+            this.course = student.course;
+            return this;
+        }
+
         public Builder studentId(String studentId) {
             this.studentId = studentId;
             return this;
