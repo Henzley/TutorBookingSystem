@@ -31,10 +31,13 @@ public class Helper {
     }
 
 
+
+
     //Booking validation methods
     /*
      * Author: Henzley Dean Spogter
      */
+
     // Validate Booking ID (e.g., must start with 'B' and have 4 digits)
     public static boolean isValidBookingId(String bookingId) {
         if (bookingId == null) return false;
