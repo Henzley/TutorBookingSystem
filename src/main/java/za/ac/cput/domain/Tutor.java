@@ -5,6 +5,10 @@ Author: Henzley Spogter (230013309)
 Date: 26 March 2025
  */
 package za.ac.cput.domain;
+/*  Tutor.java
+    Tutor class with builder
+    Author: Angelo Kane Smidt (230688020)
+ */
 
 public class Tutor {
     private String tutorID;
