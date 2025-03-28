@@ -3,7 +3,7 @@ package za.ac.cput.domain;
 /*
  * Booking.java
  * Booking domain class
- * Author: Henzley Spogter
+ * Author: Henzley Spogter [230013309]
  * Date: 27 March 2025
  */
 
@@ -115,7 +115,7 @@ public class Booking {
             return this;
         }
 
-        public BookingBuilder setBookingPayment(String bookingPayment) {
+        public BookingBuilder setBookingPrice(String bookingPayment) {
             this.bookingPrice = bookingPayment;
             return this;
         }
