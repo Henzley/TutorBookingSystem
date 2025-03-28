@@ -1,9 +1,15 @@
 package za.ac.cput.util;
 
+
+import za.ac.cput.domain.Student;
+import za.ac.cput.domain.Subject;
+
+
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+
 import java.util.UUID;
 import java.util.regex.Pattern;
 
@@ -30,6 +36,40 @@ public class Helper {
         return UUID.randomUUID().toString();
     }
 
+
+
+    public static boolean isValidSessionData(String sessionID, String bookingID, String tutorID,
+                                             Student student, String sessionStart, String sessionEnd,
+                                             String sessionStatus, String location, Subject sessionSubject) {
+        return isValidString(sessionID) &&
+                isValidString(bookingID) &&
+                isValidString(tutorID) &&
+                isValidStudent(student) &&
+                isValidTime(sessionStart) &&
+                isValidTime(sessionEnd) &&
+                isValidString(sessionStatus) &&
+                isValidString(location) &&
+                isValidSubject(sessionSubject);
+    }
+
+    private static boolean isValidString(String value) {
+        return value != null && !value.trim().isEmpty();
+    }
+
+    private static boolean isValidStudent(Student student) {
+        return student != null;
+    }
+
+    private static boolean isValidTime(String time) {
+        return time != null && !time.trim().isEmpty(); // Ensure a valid non-empty time string
+    }
+
+    private static boolean isValidSubject(Subject subject) {
+        return subject != null;
+    }
+
+
+}
 
 
 
@@ -96,9 +136,3 @@ public class Helper {
                 status.equalsIgnoreCase("Cancelled");
     }
 }
-
-
-
-
-
-

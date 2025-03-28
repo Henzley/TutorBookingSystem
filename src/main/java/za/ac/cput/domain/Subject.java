@@ -4,22 +4,22 @@ package za.ac.cput.domain;
  * Author: Keewan Titus,230778577
  * Date:27/03/2025
  */
-
-
-
 public class Subject {
     private String subjectId;
     private String subjectName;
     private String code;
     private String department;
 
-    private Subject(Builder builder) {
+    public Subject(Builder builder) {
         this.subjectId = builder.subjectId;
         this.subjectName = builder.subjectName;
         this.code =builder.code;
         this.department = builder.department;
 
     }
+
+
+
     public String getSubjectId() {
         return subjectId;
     }
@@ -71,11 +71,4 @@ public class Subject {
 
     }
 
-
-
-
-
     }
-
-
-

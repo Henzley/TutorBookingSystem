@@ -1,4 +1,8 @@
 package za.ac.cput.domain;
+
+
+public class Tutor {
+
 /*  Tutor.java
     Tutor domain class
     Author: Angelo Kane Smidt (230688020)
@@ -107,4 +111,5 @@ public class Tutor {
         }
         public Tutor build(){ return new Tutor(this);}
     }
+
 }
