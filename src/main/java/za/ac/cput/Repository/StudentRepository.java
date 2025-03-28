@@ -1,12 +1,9 @@
-package za.ac.cput.Repository;
+package za.ac.cput.repository;
 
 import za.ac.cput.domain.Student;
-import za.ac.cput.Repository.IStudentRepository;
+import za.ac.cput.domain.Subject;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * StudentRepository.java

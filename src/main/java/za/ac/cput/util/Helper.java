@@ -23,7 +23,8 @@ import java.util.regex.Pattern;
 public class Helper {
     private static final Pattern EMAIL_PATTERN =
             Pattern.compile("^[A-Za-z0-9+_.-]+@(.+)$");
-//helper methods to check for nulls and proper inputs
+
+    //helper methods to check for nulls and proper inputs
     public static boolean isNullOrEmpty(String str) {
         return str == null || str.trim().isEmpty();
     }
@@ -31,11 +32,11 @@ public class Helper {
     public static boolean isValidEmail(String email) {
         return email != null && EMAIL_PATTERN.matcher(email).matches();
     }
-//ID is generated for account
+
+    //ID is generated for account
     public static String generateId() {
         return UUID.randomUUID().toString();
     }
-
 
 
     public static boolean isValidSessionData(String sessionID, String bookingID, String tutorID,
@@ -60,16 +61,11 @@ public class Helper {
         return student != null;
     }
 
-    private static boolean isValidTime(String time) {
-        return time != null && !time.trim().isEmpty(); // Ensure a valid non-empty time string
-    }
 
     private static boolean isValidSubject(Subject subject) {
         return subject != null;
     }
 
-
-}
 
 
 
@@ -97,7 +93,7 @@ public class Helper {
     }
 
     // Validate Time
-    // ensure it's a valid 24-hour time format
+// ensure it's a valid 24-hour time format
     public static boolean isValidTime(String time) {
         if (time == null) return false;
         try {
@@ -109,14 +105,14 @@ public class Helper {
     }
 
     // Validate Student Number
-    // must start with 'ST' and have 6 digits
+// must start with 'ST' and have 6 digits
     public static boolean isValidStudentNumber(String studentNumber) {
         if (studentNumber == null) return false;
         return Pattern.matches("^ST\\d{6}$", studentNumber);
     }
 
     // Validate Booking Price
-    // must be a positive number
+// must be a positive number
     public static boolean isValidBookingPrice(String bookingPrice) {
         if (bookingPrice == null) return false;
         try {
@@ -128,7 +124,7 @@ public class Helper {
     }
 
     // Validate Booking Status
-    // must be one of predefined statuses
+// must be one of predefined statuses
     public static boolean isValidBookingStatus(String status) {
         if (status == null) return false;
         return status.equalsIgnoreCase("Confirmed") ||
@@ -136,3 +132,6 @@ public class Helper {
                 status.equalsIgnoreCase("Cancelled");
     }
 }
+
+
+

@@ -1,15 +1,17 @@
-package za.ac.cput.Repository;
+package za.ac.cput.repository;
 /*  TutorRepositoryTest.java
     Tutor repository test class
     Author: Angelo Kane Smidt (230688020)
     Date: 28 March 2025
  */
+
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import za.ac.cput.domain.Tutor;
-import za.ac.cput.Factory.TutorFactory;
+import za.ac.cput.factory.TutorFactory;
 
 @TestMethodOrder(MethodOrderer.MethodName.class)
 class TutorRepositoryTest {
@@ -22,12 +24,14 @@ class TutorRepositoryTest {
         assertEquals(tutor.getTutorId(), created.getTutorId());
         System.out.println("Created: " + created);
     }
+
     @Test
     void b_read() {
         Tutor read = repo.read(tutor.getTutorId());
         assertNotNull(read);
         System.out.println("Read: " + read);
     }
+
     @Test
     void c_update() {
         // Create a new Tutor with updated number but same ID
@@ -43,12 +47,14 @@ class TutorRepositoryTest {
         assertNotNull(repo.update(updated));
         System.out.println("Updated: " + updated);
     }
+
     @Test
     void d_delete() {
         boolean success = repo.delete(tutor.getTutorId());
         assertTrue(success);
         System.out.println("Deleted: " + success);
     }
+
     @Test
     void e_getAll() {
         System.out.println("Show all:");

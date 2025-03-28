@@ -1,33 +1,38 @@
-package za.ac.cput.Repository;
+package za.ac.cput.repository;
 
 /*  TutorRepository.java
     Tutor repository class
     Author: Angelo Kane Smidt (230688020)
     Date: 28 March 2025
  */
+
+import za.ac.cput.domain.Subject;
 import za.ac.cput.domain.Tutor;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class TutorRepository implements ITutorRepository{
+public class TutorRepository implements ITutorRepository {
     private static TutorRepository repo = null;
-    private List<Tutor>  tutorDB;
+    private List<Tutor> tutorDB;
 
     private TutorRepository() {
         tutorDB = new ArrayList<Tutor>();
     }
-    public static TutorRepository getRepo(){
-        if (repo == null){
+
+    public static TutorRepository getRepo() {
+        if (repo == null) {
             repo = new TutorRepository();
         }
         return repo;
     }
+
     @Override
     public Tutor create(Tutor tutor) {
         tutorDB.add(tutor);
         return tutor;
     }
+
     @Override
     public Tutor read(String tutorId) {
         return tutorDB.stream()
@@ -35,6 +40,7 @@ public class TutorRepository implements ITutorRepository{
                 .findAny()
                 .orElse(null);
     }
+
     @Override
     public Tutor update(Tutor tutor) {
         Tutor oldTutor = read(tutor.getTutorId());
@@ -45,6 +51,7 @@ public class TutorRepository implements ITutorRepository{
         }
         return null;
     }
+
     @Override
     public boolean delete(String tutorId) {
         Tutor tutor = read(tutorId);
@@ -54,6 +61,7 @@ public class TutorRepository implements ITutorRepository{
         }
         return false;
     }
+
     @Override
     public List<Tutor> getAll() {
         return new ArrayList<>(tutorDB);

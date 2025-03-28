@@ -1,7 +1,7 @@
 package za.ac.cput.domain;
 
 
-public class Tutor {
+
 
 /*  Tutor.java
     Tutor domain class
@@ -10,6 +10,7 @@ public class Tutor {
  */
 
 //import za.ac.cput.domain.Subject;
+
 import java.util.List;
 
 public class Tutor {
@@ -18,7 +19,7 @@ public class Tutor {
     private String tutorSurname;
     private String tutorEmail;
     private String tutorPhoneNumber;
-   // private List<Subject> tutorDB;
+    // private List<Subject> tutorDB;
     private String qualifications;
 
     //default constructor
@@ -36,17 +37,29 @@ public class Tutor {
     }
 
     //getters
-    public String getTutorId() {return tutorId;}
+    public String getTutorId() {
+        return tutorId;
+    }
 
-    public String getTutorName() {return tutorName;}
+    public String getTutorName() {
+        return tutorName;
+    }
 
-    public String getTutorSurname() {return tutorSurname;}
+    public String getTutorSurname() {
+        return tutorSurname;
+    }
 
-    public String getTutorEmail() {return tutorEmail;}
+    public String getTutorEmail() {
+        return tutorEmail;
+    }
 
-    public String getTutorPhoneNumber() {return tutorPhoneNumber;}
+    public String getTutorPhoneNumber() {
+        return tutorPhoneNumber;
+    }
 
-    public String getQualifications() {return qualifications;}
+    public String getQualifications() {
+        return qualifications;
+    }
 
     //overridden toString
     @Override
@@ -62,7 +75,7 @@ public class Tutor {
     }
 
     //TutorBuilder class
-    public static class TutorBuilder{
+    public static class TutorBuilder {
         private String tutorId;
         private String tutorName;
         private String tutorSurname;
@@ -71,7 +84,7 @@ public class Tutor {
         /*tutorSubject: List<Subject>*/
         private String qualifications;
 
-        public TutorBuilder(){
+        public TutorBuilder() {
             this.tutorId = tutorId;
             this.tutorName = tutorName;
             this.tutorSurname = tutorSurname;
@@ -109,7 +122,11 @@ public class Tutor {
             this.qualifications = qualifications;
             return this;
         }
-        public Tutor build(){ return new Tutor(this);}
+
+        public Tutor build() {
+            return new Tutor(this);
+        }
     }
 
 }
+

@@ -1,17 +1,21 @@
 package za.ac.cput;
 
 import za.ac.cput.domain.Booking;
+import za.ac.cput.factory.BookingFactory;
 
 public class Main {
     public static void main(String[] args) {
-
-        //Test booking object creation
-//        Booking booking1 = new Booking.BookingBuilder("123456789",
-//                "23 April 2025",
-//                "12h30",
-//                "23072000",
-//                "R500",
-//                "Confirmed").build();
-//        System.out.println(booking1);
+/*
+* Henzley Spogter [230013309]
+* main repo link: https://github.com/Henzley/TutorBookingSystem
+*
+* Angelo Kane Smidt (230688020)
+*
+* Cameron Myles Savage ([230582567])
+*
+* Hope Ringane (221174109)
+*
+* Keewan Titus 230778577
+ */
     }
 }

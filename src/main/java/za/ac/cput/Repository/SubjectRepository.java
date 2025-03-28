@@ -1,105 +1,77 @@
-package za.ac.cput.Repository;
+package za.ac.cput.repository;
+
 import za.ac.cput.domain.Subject;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public  class SubjectRepository implements ISubjectRepository {
-    public static ISubjectRepository repository = null;
-    private List<Subject> subjectslist;
+public class SubjectRepository implements ISubjectRepository {
+    private static SubjectRepository repository = null;
+    private List<Subject> subjectsList;
 
     private SubjectRepository() {
-        subjectslist = new ArrayList<Subject>();
+        subjectsList = new ArrayList<>();
     }
 
-    public static IRepository getRepository() {
+    public static SubjectRepository getInstance() {
         if (repository == null) {
-
             repository = new SubjectRepository();
-
-
         }
         return repository;
-
     }
-
 
     @Override
-    public List<Subject>getAll() {
-        return subjectslist;
+    public List<Subject> getAll() {
+        return new ArrayList<>(subjectsList);
     }
-
-
-
 
     @Override
     public Subject create(Subject subject) {
-        boolean success = subjectslist.add(subject);
-        if (subject!=null){
-            subjectslist.add(subject);
+        if (subject == null) {
+            return null;
+        }
+
+        // Check if subject already exists to avoid duplicates
+        if (read(subject.getSubjectName()) == null) {
+            subjectsList.add(subject);
             return subject;
+        }
 
-
-
-}
         return null;
     }
 
     @Override
-    public Subject read(String subjectname) {
-        for(Subject subject:subjectslist){
-            if(subject.getSubjectName().equalsIgnoreCase(subjectname)){
-                return subject;
-            }
-
-
-
-
-        }
-
-        return null;
+    public Subject read(String subjectName) {
+        return subjectsList.stream()
+                .filter(subject -> subject.getSubjectName().equalsIgnoreCase(subjectName))
+                .findFirst()
+                .orElse(null);
     }
 
     @Override
     public Subject update(Subject subject) {
-        boolean update = subjectslist.add(subject);
-        if (subject!=null){
-            subjectslist.add(subject);
-            return subject;
+        if (subject == null) {
+            return null;
         }
 
+        // Find existing subject
+        Subject existingSubject = read(subject.getSubjectName());
 
+        if (existingSubject != null) {
+            // Remove old subject
+            subjectsList.remove(existingSubject);
+            // Add updated subject
+            subjectsList.add(subject);
+            return subject;
+        }
 
         return null;
     }
 
     @Override
-    public boolean delete(Subject subject) {
-        for(Subject subject1:subjectslist){
-            if(subject1.getSubjectName().equalsIgnoreCase(subject.getSubjectName())){
-                subjectslist.remove(subject1);
-                return true;
-            }
-        }
-        return false;
-
-
+    public boolean delete(String subjectName) {
+        return subjectsList.removeIf(
+                s -> s.getSubjectName().equalsIgnoreCase(subjectName)
+        );
     }
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

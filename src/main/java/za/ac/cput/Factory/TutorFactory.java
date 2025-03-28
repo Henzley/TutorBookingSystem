@@ -1,4 +1,4 @@
-package za.ac.cput.Factory;
+package za.ac.cput.factory;
 /*  TutorFactory.java
     Factory for Tutor domain
     Author: Angelo Kane Smidt (230688020)

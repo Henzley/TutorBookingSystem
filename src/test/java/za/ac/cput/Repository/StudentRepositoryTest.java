@@ -1,14 +1,12 @@
-package za.ac.cput.Repository;
+package za.ac.cput.repository;
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import za.ac.cput.domain.Student;
-import za.ac.cput.Factory.StudentFactory;
-import static org.junit.jupiter.api.Assertions.*;
+import za.ac.cput.factory.StudentFactory;
 
 /**
  * StudentRepositoryTest.java

@@ -1,4 +1,7 @@
-package za.ac.cput.Repository;
+package za.ac.cput.repository;
+
+import za.ac.cput.domain.Subject;
+
 /**
  * IRepository.java
  * Main Repository interface

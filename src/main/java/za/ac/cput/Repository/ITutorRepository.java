@@ -1,4 +1,4 @@
-package za.ac.cput.Repository;
+package za.ac.cput.repository;
 /*  ITutorRepository.java
     Tutor repository interface
     Author: Angelo Kane Smidt (230688020)

@@ -1,4 +1,4 @@
-package za.ac.cput.Factory;
+package za.ac.cput.factory;
 /*  TutorFactoryTest.java
     Tutor factory test class
     Author: Angelo Kane Smidt (230688020)
