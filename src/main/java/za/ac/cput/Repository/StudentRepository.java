@@ -16,13 +16,7 @@ import java.util.Set;
  */
 public class StudentRepository implements IStudentRepository {
     private static StudentRepository repository = null;
-    // private Set<Student> studentDB;
     private List<Student> studentDB;
-
-    /* private StudentRepository() {
-         studentDB = new HashSet<>();
-     }
- */
     private StudentRepository(){
         studentDB = new ArrayList<Student>();
     }
@@ -33,7 +27,7 @@ public class StudentRepository implements IStudentRepository {
         }
         return repository;
     }
-
+//code for CRUD methods using a List
     @Override
     public Student create(Student student) {
         studentDB.add(student);
@@ -74,16 +68,5 @@ public class StudentRepository implements IStudentRepository {
         return new ArrayList<>(studentDB);
     }
 
-   /* @Override
-    public Set<Student> getStudentsByCourse(String course) {
-        Set<Student> studentsByCourse = new HashSet<>();
-        for (Student student : studentDB) {
-            if (student.getCourse().equalsIgnoreCase(course)) {
-                studentsByCourse.add(student);
-            }
-        }
-        return studentsByCourse;
-    }
 
-*/
 }

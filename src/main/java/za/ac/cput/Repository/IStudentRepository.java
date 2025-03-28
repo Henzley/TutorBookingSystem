@@ -13,7 +13,3 @@ import java.util.List;
 public interface IStudentRepository extends IRepository <Student, String> {
     List<Student> getAll();
 }
-
-/*public interface IStudentRepository extends IRepository<Student, String> {
-    Set<Student> getStudentsByCourse(String course);
-}*/
