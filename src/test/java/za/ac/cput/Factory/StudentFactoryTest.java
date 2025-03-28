@@ -3,8 +3,16 @@ package za.ac.cput.Factory;
 import org.junit.jupiter.api.Test;
 import za.ac.cput.domain.Student;
 import za.ac.cput.util.Helper;
-
 import static org.junit.jupiter.api.Assertions.*;
+
+/**
+ * StudentFactoryTest.java
+ * Test for StudentFactory
+ * Author: [Cameron Savage] ([230582567])
+ * Date: [27/03/25]
+ */
+
+
 class StudentFactoryTest {
 
 
@@ -21,16 +29,5 @@ class StudentFactoryTest {
     }
 
 
-  //  void testCreateStudent_Pass() {
 
-
- //   }
-    //Test to show null details are not accepted
- /*   @Test
-    void testCreateStudent_Fail() {
-        Student student = StudentFactory.createStudent(null, "Jonkler", "Jonkles123@gmail.com", "0679794738", "230582567","CNF152S");
-        assertNull(student, "Student is null");
-
-     }
-*/
 }

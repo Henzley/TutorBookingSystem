@@ -2,7 +2,6 @@ package za.ac.cput.Factory;
 
 import za.ac.cput.domain.Student;
 import za.ac.cput.util.Helper;
-//import za.ac.cput.domain.util.Helper;
 
 /**
  * StudentFactory.java
@@ -10,13 +9,13 @@ import za.ac.cput.util.Helper;
  * Author: [Cameron Savage] ([230582567])
  * Date: [26/03/2025]
  */
+//Factory class implementing helper methods from helper class
 public class StudentFactory {
     public static Student createStudent(String name, String surname, String email,
                                         String phone, String studentNumber, String course) {
         if (Helper.isNullOrEmpty(name) || Helper.isNullOrEmpty(surname) ||
                 Helper.isNullOrEmpty(studentNumber)) {
             throw new IllegalArgumentException("Name, surname and student number are required");
-           // System.out.println("Error: Name or Surname or Student number is empty");
         }
 
         if (!Helper.isValidEmail(email)) {
