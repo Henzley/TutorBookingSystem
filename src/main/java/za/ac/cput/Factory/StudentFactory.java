@@ -16,6 +16,7 @@ public class StudentFactory {
         if (Helper.isNullOrEmpty(name) || Helper.isNullOrEmpty(surname) ||
                 Helper.isNullOrEmpty(studentNumber)) {
             throw new IllegalArgumentException("Name, surname and student number are required");
+           // System.out.println("Error: Name or Surname or Student number is empty");
         }
 
         if (!Helper.isValidEmail(email)) {
