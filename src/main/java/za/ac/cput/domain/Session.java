@@ -1,5 +1,9 @@
 package za.ac.cput.domain;
-
+/*Session.java
+Session model class
+Author: Hope Ringane(221174109)
+Date 28 March 2.25
+ */
 public class Session {
     private final String sessionID;
     private final String bookingID;

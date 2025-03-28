@@ -10,13 +10,16 @@ public class Subject {
     private String code;
     private String department;
 
-    private Subject(Builder builder) {
+    public Subject(Builder builder) {
         this.subjectId = builder.subjectId;
         this.subjectName = builder.subjectName;
         this.code =builder.code;
         this.department = builder.department;
 
     }
+
+
+
     public String getSubjectId() {
         return subjectId;
     }

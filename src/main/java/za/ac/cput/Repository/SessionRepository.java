@@ -1,5 +1,9 @@
 package za.ac.cput.Repository;
-//ringane
+/*Session.java
+Session Repository class
+Author: Hope Ringane(221174109)
+Date 28 March 2.25
+ */
 import za.ac.cput.domain.Session;
 import java.util.ArrayList;
 import java.util.List;

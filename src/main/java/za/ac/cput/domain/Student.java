@@ -18,7 +18,7 @@ public class Student {
     private String course;
 
     // Private constructor for Builder
-    private Student(Builder builder) {
+    public Student(Builder builder) {
         this.studentId = builder.studentId;
         this.name = builder.name;
         this.surname = builder.surname;
@@ -27,6 +27,8 @@ public class Student {
         this.studentNumber = builder.studentNumber;
         this.course = builder.course;
     }
+
+
 
     // Getters
     public String getStudentId() { return studentId; }
