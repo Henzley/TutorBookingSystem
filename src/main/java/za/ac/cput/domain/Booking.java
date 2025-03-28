@@ -12,7 +12,7 @@ public class Booking {
     private String bookingDate;
     private String bookingTime;
     private String studentNumber;
-    private String bookingPayment;
+    private String bookingPrice;
     private String bookingStatus;
 
     //Default constructor
@@ -25,7 +25,7 @@ public class Booking {
         this.bookingDate = builder.bookingDate;
         this.bookingTime = builder.bookingTime;
         this.studentNumber = builder.studentNumber;
-        this.bookingPayment = builder.bookingPayment;
+        this.bookingPrice = builder.bookingPrice;
         this.bookingStatus = builder.bookingStatus;
     }
 
@@ -46,7 +46,7 @@ public class Booking {
     }
 
     public String getBookingPayment() {
-        return bookingPayment;
+        return bookingPrice;
     }
 
     public String getBookingStatus() {
@@ -61,7 +61,7 @@ public class Booking {
                 ", bookingDate='" + bookingDate + '\'' +
                 ", bookingTime='" + bookingTime + '\'' +
                 ", studentNumber='" + studentNumber + '\'' +
-                ", bookingPayment='" + bookingPayment + '\'' +
+                ", bookingPayment='" + bookingPrice + '\'' +
                 ", bookingStatus='" + bookingStatus + '\'' +
                 '}';
     }
@@ -72,9 +72,15 @@ public class Booking {
         private String bookingDate;
         private String bookingTime;
         private String studentNumber;
-        private String bookingPayment;
+        private String bookingPrice;
         private String bookingStatus;
 
+        //default builder constructor
+        public BookingBuilder() {
+
+        }
+
+        //parameterised builder constructor
         public BookingBuilder(String bookingId,
                               String bookingDate,
                               String bookingTime,
@@ -85,7 +91,7 @@ public class Booking {
             this.bookingDate = bookingDate;
             this.bookingTime = bookingTime;
             this.studentNumber = studentNumber;
-            this.bookingPayment = bookingPayment;
+            this.bookingPrice = bookingPayment;
             this.bookingStatus = bookingStatus;
         }
 
@@ -110,7 +116,7 @@ public class Booking {
         }
 
         public BookingBuilder setBookingPayment(String bookingPayment) {
-            this.bookingPayment = bookingPayment;
+            this.bookingPrice = bookingPayment;
             return this;
         }
 
